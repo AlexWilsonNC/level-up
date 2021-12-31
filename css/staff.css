@@ -1,0 +1,26 @@
+#staff-faces {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 100px;
+}
+#staff-faces img {
+    border-radius: 50%;
+    margin: 15px 10px 0px;
+    width: 60px;
+    height: 60px;
+}
+.staff-active {
+    border: 3px solid rgb(var(--purple));
+}
+
+#staff-person {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 100px;
+}
+#mark {
+    width: 600px;
+}

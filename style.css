@@ -5,10 +5,11 @@
     text-decoration: none;
     font-family: 'Roboto', sans-serif;
     color: #000;
+    box-sizing: border-box;
 }
 :root {
-    --purple: rgb(143, 0, 143);
-    --blue: rgb(0, 119, 255);
+    --purple: 143, 0, 143;
+    --blue: 0, 119, 255;
 }
 /* @media screen and (prefers-reduced-motion: no-preference) {
     html {
@@ -16,7 +17,7 @@
     }
 } */
 
-/* NAVBAR */
+/* NAVBAR ******************************/
 nav {
     width: 100%;
     display: flex;
@@ -31,21 +32,34 @@ nav {
 #nav-left img {
     width: 200px;
     margin: 0px 0px 0px 50px;
+    position: relative;
 }
 #nav-right {
     margin-right: 50px;
+    width: 50vw;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
 }
-#nav-right a {
-    font-size: 24px;
-    transition: ease-in-out 0.2s;
-    padding: 22px 25px;
+.nav-a {
+    font-size: 26px;
+    position: relative;
 }
-#nav-right a:hover {
-    background-color: var(--purple);
-    color: #fff;
+.nav-a:after {
+    content: "";
+    position: absolute;    
+    background-color: rgb(var(--blue));
+    height: 4px;
+    width: 0;
+    left: 0;
+    bottom: -10px;
+    transition: 0.27s;
+}
+.nav-a:hover:after {
+    width: 100%;
 }
 
-/* HEAD */
+/* HEAD ******************************/
 header {
     width: 100%;
     margin: 100px 0px 35px 0px;
@@ -60,27 +74,32 @@ header img {
     flex-direction: row;
     justify-content: flex-end;
     position: relative;
-    margin-top: -40px;
+    margin-top: -30px;
 }
 #header-blocks a {
-    font-size: 36px;
-    color: #fff;
-    padding: 15px 25px;
+    font-size: 34px;
+    font-weight: 500;
+    padding: 12.5px 22.5px;
     margin-right: 10px;
     letter-spacing: 1px;
     transition: ease-in-out 0.3s;
 }
 #purple-box {
-    background-color: var(--purple);
+    /* background-color: rgb(var(--blue)); */
+    border: 4px solid rgb(var(--blue));
+    background-color: rgba(189, 229, 255, 0.6);
 }
 #blue-box {
-    background-color: var(--blue);
+    /* background-color: rgb(var(--purple)); */
+    border: 4px solid rgb(var(--purple));
+    background-color: rgba(249, 183, 255, 0.5);
 }
 #header-blocks a:hover {
     margin-top: -7.5px;
     cursor: pointer;
 }
 
+/* NOW ENROLLING ******************************/
 #first-info {
     display: flex;
     flex-direction: column;
@@ -89,10 +108,11 @@ header img {
 }
 h1 {
     font-size: 54px;
+    font-family: 'Orbitron', sans-serif;
 }
 .purple-hr {
     width: 30%;
-    border-top: 8px solid var(--purple);
+    border-top: 8px solid rgb(var(--purple));
     margin: 10px 0px 35px;
 }
 #info-img {
@@ -109,7 +129,7 @@ h1 {
     backdrop-filter: blur(4px);
     position: relative;
     margin: -150px 0px 0px 400px;
-    border: 2px solid black;
+    border: 3.5px solid black;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -126,24 +146,138 @@ h1 {
 #enrolling {
     position: relative;
     bottom: 0;
+    text-align: center;
     width: 100%;
-    margin-top: 15px;
     font-size: 32px;
     font-weight: 500;
-    background-color: var(--blue);
+    background-color: rgb(var(--blue));   
+    border-left: 1px solid rgb(var(--blue));
     color: #fff;
     padding: 10px 0px;
+    transition: ease-in-out 0.3s;
+}
+#enrolling:hover {
+    padding-bottom: 20px;
+    cursor: pointer;
 }
 
-/* LOCATIONS */
+/* LEVEL UP WITH *****************************/
+#level-up-with {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 50px;
+}
+#activities {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 80%;
+}
+.activity-block {
+    display: flex;
+    flex-direction: row;
+    border: 4px solid black;
+    border-radius: 60px;
+    transition: ease-in-out 0.3s;
+}
+.left-img-border {
+    width: 40%;
+    height: 325px;
+    border-top-left-radius: 56px;
+    border-bottom-left-radius: 56px;
+}
+.right-img-border {
+    width: 40%;
+    height: 325px;
+    border-top-right-radius: 56px;
+    border-bottom-right-radius: 56px;
+}
+.activity-paragraph {
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(5px);
+}
+.normal {
+    padding-left: 25px;
+    border-top-right-radius: 56px;
+    border-bottom-right-radius: 56px;
+}
+.reverse {
+    align-items: flex-end;
+    padding-right: 25px;
+    text-align: end;
+    border-top-left-radius: 56px;
+    border-bottom-left-radius: 56px;
+}
+h3 {
+    font-size: 52px;
+    margin-bottom: 25px;
+}
+.activity-paragraph p {
+    font-size: 32px;
+}
+.a1 {
+    z-index: 0;
+    margin-left: -50px;
+}
+.a1:hover {
+    margin-top: -50px;
+}
+.a2 {
+    margin-top: -250px;
+    z-index: 1;
+    margin-right: -50px;
+}
+.a2:hover {
+    z-index: 10;
+}
+.a3 {
+    margin-top: -250px;
+    z-index: 2;
+    margin-left: -50px;
+}
+.a3:hover {
+    z-index: 10;
+}
+.a4 {
+    margin-top: -250px;
+    z-index: 3;
+    margin-right: -50px;
+}
+.a4:hover {
+    z-index: 10;
+}
+.a5 {
+    margin-top: -250px;
+    z-index: 4;
+    margin-left: -50px;
+}
+.a5:hover {
+    z-index: 10;
+}
+.a6 {
+    margin-top: -250px;
+    z-index: 5;
+    margin-right: -50px;
+}
+.a6:hover {
+    z-index: 10;
+}
+
+/* LOCATIONS ******************************/
 #locations {
     display: flex;
     align-items: center;
     flex-direction: column;
     margin-bottom: 50px;
 }
-#locations h2 {
+h2 {
     font-size: 54px;
+    font-family: 'Orbitron', sans-serif;
 }
 #location-blocks {
     display: flex;
@@ -153,7 +287,6 @@ h1 {
 .location {
     height: 500px;
     width: 365px;
-    background-color: black;
     background-repeat: no-repeat;
     background-size: 100% 100%;
     overflow: hidden;
@@ -181,13 +314,13 @@ h1 {
     font-size: 26px;
 }
 
-/* BOTTOM CONTACT */
+/* BOTTOM CONTACT ******************************/
 #contact-bottom {
     display: flex;
     flex-direction: column;
     padding: 15px;
 }
-#contact-bottom h3 {
+#contact-bottom h4 {
     font-size: 28px;
 }
 #social-icons {
@@ -231,7 +364,7 @@ h1 {
     border: 0.5px solid grey;
 }
 
-/* FOOTER */
+/* FOOTER ******************************/
 footer {
     height: 125px;
     background-color: black;
