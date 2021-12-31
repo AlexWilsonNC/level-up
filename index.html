@@ -14,6 +14,7 @@
     <link href='https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500&display=swap' rel='stylesheet'>
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600&display=swap" rel="stylesheet">
     <script src='https://kit.fontawesome.com/b99e675b6e.js'></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 </head>
 
 <body>
@@ -56,18 +57,49 @@
         <div id='level-up-with'>
             <h2>LEVEL UP! with...</h2>
             <hr class='purple-hr'>
+
+            <div class="tab-container">
+                <ul class="tabs">
+                    <a src="tabf0-1" class="active-tab">Brickcrafting</a>
+                    <a src="tabf0-2">Wizard's Chess</a>
+                    <a src="tabf0-3">Laser Tag</a>
+                    <a src="tabf0-4">Pokemon TCG</a>
+                    <a src="tabf0-5">Programming</a>
+                    <a src="tabf0-6">Robotics</a>
+                </ul>
+                <div class="tab-content">
+                    <div id="tabf0-1">Learn a variety of building skills and techniques using real world engineering and
+                        architectural principles. Students put what they've learned to the test by competing in
+                        teams in the Chopping Block, our weekly building competition.</div>
+                    <div id="tabf0-2">An intense strategic game of swords and magic, with a chess twist! Participants take on the
+                        role of iconic chess pieces and coordinate with their team to score points and and eliminate
+                        the other teams king.</div>
+                    <div id="tabf0-3">Our fast-paced laser tag battles will have you child running and ducking for cover in intense
+                        battlefields that challenge them to strategize with teammates, move quickly and carefully,
+                        and complete objectives to claim victory!</div>
+                    <div id="tabf0-4">Learn to play, and compete in the Pokemon Trading Game! Not only are tabletop games fun to
+                        play, but they're perfect for learning and enhancing skills like math, reading
+                        comprehension, critical thinking, strategy and more; and in a competitive context, they
+                        promote teamwork, cooperation, and sportsmanship.</div>
+                    <div id="tabf0-5">idk</div>
+                    <div id="tabf0-6">Learn how to build and program robots using Lego Mindstorms, EV3, and WeDo Robotics systems.
+                        Participate in creative, timed, and problem-solbing challenges; competitions and other
+                        activities created to exercise logic and critical thinking skills.</div>
+                </div>
+            </div>
+
             <div id='activities'>
                 <div class='activity-block a1'>
                     <img class='left-img-border' src='./assets/brickcraft.jpg' alt='legos'>
                     <div class='activity-paragraph normal'>
                         <h3>Brickcrafting</h3>
-                        <p>Learn a variety of building skills and techniques using real world engineering and architectural principles. Students put what they've learned to the test by competing in teams in the Chopping Block, our weekly building competition.</p>
+                        <p></p>
                     </div>
                 </div>
                 <div class='activity-block a2'>
                     <div class='activity-paragraph reverse'>
                         <h3>Wizard's Chess</h3>
-                        <p>An intense strategic game of swords and magic, with a chess twist! Participants take on the role of iconic chess pieces and coordinate with their team to score points and and eliminate the other teams king.</p>
+                        <p></p>
                     </div>
                     <img class='right-img-border' src='./assets/chass.jpg' alt='wizards chess'>
                 </div>
@@ -75,13 +107,13 @@
                     <img class='left-img-border' src='./assets/laser-tag.jpg' alt='laser tag'>
                     <div class='activity-paragraph normal'>
                         <h3>Laser Tag</h3>
-                        <p>Our fast-paced laser tag battles will have you child running and ducking for cover in intense battlefields that challenge them to  strategize with teammates, move quickly and carefully, and complete objectives to claim victory!</p>
+                        <p></p>
                     </div>
                 </div>
                 <div class='activity-block a4'>
                     <div class='activity-paragraph reverse'>
                         <h3>Pokemon TCG</h3>
-                        <p>Learn to play, and compete in the Pokemon Trading Game! Not only are tabletop games fun to play, but they're perfect for learning and enhancing skills like math, reading comprehension, critical thinking, strategy and more; and in a competitive context, they promote teamwork, cooperation, and sportsmanship.</p>
+                        <p></p>
                     </div>
                     <img class='right-img-border' src='./assets/kids-poke-tourney.jpg' alt='tcg tournament'>
                 </div>
@@ -89,13 +121,13 @@
                     <img class='left-img-border' src='./assets/programming.jpg' alt='programming'>
                     <div class='activity-paragraph normal'>
                         <h3>Programming</h3>
-                        <p>idk rdddddddd dddddddd ddddddddddd ddddddddddd ddddddddd dddddddddd dddddddddd dddddddddd dddddddddd ddddddddddd dddddddddd dddddddddd dddddddddd dddd ddddddddd dddddd d</p>
+                        <p></p>
                     </div>
                 </div>
                 <div class='activity-block a6'>
                     <div class='activity-paragraph reverse'>
                         <h3>Robotics</h3>
-                        <p>Learn how to build and program robots using Lego Mindstorms, EV3, and WeDo Robotics systems. Participate in creative, timed, and problem-solbing challenges; competitions and other activities created to exercise logic and critical thinking skills.</p>
+                        <p></p>
                     </div>
                     <img class='right-img-border' src='./assets/robotics.jpg' alt='Robotics'>
                 </div>
@@ -165,6 +197,7 @@
             </div>
         </div>
     </footer>
+    <script src='./index.js'></script>
 </body>
 
 </html>
