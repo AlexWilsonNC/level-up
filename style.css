@@ -111,7 +111,7 @@ h1 {
     font-family: 'Orbitron', sans-serif;
 }
 .purple-hr {
-    width: 37%;
+    width: 34%;
     border-top: 8px solid rgb(var(--purple));
     margin: 10px 0px 35px;
 }
@@ -232,7 +232,6 @@ ul.tabs a.active-tab{
 .tab-content > div p{
     width: 60%;
     font-size: 32px;
- 
 }
 .tab-content > div img{
     width: 40%;
